@@ -6,11 +6,13 @@ phases:
       dotnet: 8.0
   build:
     commands:
+      - echo "Restoring..."
       - dotnet restore
-      - dotnet build --configuration Release
-      - dotnet publish -c Release -o published
+      - echo "Building..."
+      - dotnet build -c Release
+      - echo "Publishing..."
+      - dotnet publish -c Release -o publish
 artifacts:
   files:
-    - published/**
-
-
+    - '**/*'
+  base-directory: publish
