@@ -98,7 +98,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "CleanCode AWS API test", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "CleanCode AWS API.", Version = "v1" });
 });
 
 var app = builder.Build();
@@ -108,7 +108,7 @@ if (app.Environment.IsDevelopment() || app.Environment.IsStaging() || app.Enviro
 {
     app.UseSwagger();
     app.UseSwaggerUI(c => 
-            c.DocumentTitle = "CleanCode AWS API" 
+            c.DocumentTitle = "CleanCode AWS API test"
         );
 }
 
